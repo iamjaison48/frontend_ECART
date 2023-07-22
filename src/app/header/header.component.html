@@ -1,0 +1,24 @@
+  <!-- Navigation-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+    <div class="container px-5 px-lg-5  ">
+        <a class="navbar-brand me-5" routerLink="" ><i class="fa-sharp fa-solid fa-cart-shopping fa-beat-fade"></i> Shop N Save</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      
+          <div>
+            <input (keyup)="search($event)" type="text" placeholder="Search your product" class="form-control ">
+          </div>
+            <form class="d-flex ms-auto">
+              <button class="btn btn-outline-light bg-dark text-white" type="submit" routerLink="products/wishlist">
+                <i class="fa-sharp fa-solid fa-heart text-danger"></i> 
+                Wishlist
+            </button>
+                <button class="btn btn-outline-light bg-dark text-white ms-4" type="submit" routerLink="products/cart">
+                  <i class="fa-sharp fa-solid fa-cart-shopping text-info "></i> 
+                     Cart
+                    <span class="badge bg-dark text-white ms-1 rounded-pill">{{cartcounts}}</span>
+                </button>
+            </form>
+        </div>
+    </div>
+</nav>

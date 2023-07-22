@@ -1,1 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Caveat:wght@700&family=Geologica:wght@800&family=Itim&family=Julius+Sans+One&family=Manrope:wght@500&family=Merienda:wght@900&family=Petrona:ital,wght@1,300&family=Poiret+One&family=Roboto+Mono:ital,wght@0,700;1,600&family=Staatliches&family=Tsukimi+Rounded:wght@600&family=Yomogi&family=Yusei+Magic&display=swap');
+
+
+body{
+  font-family: 'Barlow', sans-serif;
+
+}

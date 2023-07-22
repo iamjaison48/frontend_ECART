@@ -1,0 +1,29 @@
+E Commerce frontend 
+
+1.create folder E-cart,inside crate frontend and backend
+2.project creation - ng new e-cart-frontend
+3.run 
+4.clear app.component.html
+5.install 3rd party libraries
+  -bootstrap in index.html
+  -fontawesome in index.html
+  -google fonts in style.css
+6.Creating components
+7.Lazy loading
+     Lazy loading helps keep initial bundle sizes smaller, which in turn helps decrease load times. 
+
+    -Module generation ->ng g m products --route prdoucts --module app.module      
+
+  Component create inside the products module   
+  ->ng g c products/allProducts
+  ->ng g c products/viewProducts
+  ->ng g c products/cart
+  ->ng g c products/wishlist
+
+  Not included in product module
+  ->ng g c header
+  ->ng g c footer
+  ->ng g c pageNotFound
+
+8.Setup paths
+http://localhost:4200/   =>   http://localhost:4200/products/allProducts

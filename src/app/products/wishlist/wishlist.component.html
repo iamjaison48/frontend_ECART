@@ -1,0 +1,44 @@
+<!-- empty wishlist -->
+
+
+<div class="container" *ngIf="allwishlist.length==0">
+  <div class="row">
+    <div class="col text-center">
+      <!-- empty wishlist image -->
+      <img src="https://cdn130.picsart.com/252265520012212.png" alt="" height="400px" width="100%">
+      <h3 class="mt-3">Your Wishlist is empty</h3>
+      <button class="btn btn-dark mt-3">Shop More</button>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- wishlist with content -->
+<section class="py-5">
+  <div class="container px-4 px-lg-5 mt-5">
+      <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+          <div class="col mb-5" *ngFor="let wish of  allwishlist">
+              <div class="card h-100">
+                  <!-- Product image-->
+                  <img class="card-img-top" [src]="wish.image" alt="..." />
+                  <!-- Product details-->
+                  <div class="card-body p-4">
+                      <div class="text-center">
+                          <!-- Product name-->
+                          <h5 class="fw-bolder">{{wish.title}}</h5>
+                          <!-- Product price-->
+                        ${{wish.price}}
+                      </div>
+                  </div>
+                  <!-- Product actions-->
+                  <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                      <div class="text-center">
+                        <a (click)="deletewishlist(wish.id)" class="btn btn-outline-dark mt-auto"><i class="fa-sharp fa-solid fa-heart text-danger"></i></a>
+                        <a (click)="addtocart(wish)" class="btn btn-outline-dark mt-auto ms-5" ><i class="fa-sharp fa-solid fa-cart-shopping text-info "></i> 
+                        </a>
+
+                      </div>
+                  </div>
+              </div>
+          </div>
